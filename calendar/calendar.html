@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calorie Tracker</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="../images/dumbell2.jpg" id="barbell-icon">
+        <span class="fs-4">Elevate Fitness</span>
+    </a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../home/test-home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../calendar/calendar.html" class="nav-link active" aria-current="page">Calendar</a></li>
+        <li class="nav-item"><a href="../to-do/to-do.html" class="nav-link">Fitness Goals</a></li>
+    </ul>
+</header>
+
+<body>
+    <main>
+        <div class="main-title container">
+            <h1>Fitness Calendar</h1>
+        </div>
+
+        <div class="calendar container">
+            <div id="carouselExample" class="carousel">
+                <div class="carousel-inner" id="carousel-inner">
+                    <!-- JavaScript will dynamically generate carousel items here -->
+                </div>
+
+                <div class="carousel-controls container-fluid">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                    
+                </div>
+
+            </div>
+
+            <ul class="days" id="days-list">
+                <!-- JavaScript will dynamically generate the days of the month here -->
+            </ul>
+        </div>
+
+        <div class="container task-title">
+            <h2>Select Fitness Plan</h2>
+        </div>
+
+        <div class="container tasks" id="tasksBox">
+            <div class="flexIsDumb">
+                <span class="slide badge rounded-pill badge-custom btn1 slide"> <h3 id="plan-text">Beginner Plan: Easy</h3></span>
+                <span class="badge rounded-pill badge-custom btn2 slide"> <h3 id="plan-text">Intermediate Plan: Moderate</h3></span>
+                <span class="badge rounded-pill badge-custom btn3 slide"> <h3 id="plan-text">Expert Plan: Hard</h3></span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="footer-text">© 2024 Elevate Fitness, Inc</p>
+
+
+
+        <ul class="footer-nav">
+            <li><a href="../home/test-home.html" class="nav-link">Home</a></li>
+            <li><a href="../calendar/calendar.html" class="nav-link">Calendar</a></li>
+            <li><a href="../to-do/to-do.html" class="nav-link">Fitness Goals</a></li>
+        </ul>
+    </footer>
+
+    <script src="./calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fitness Goals</title>
+    <link rel="stylesheet" href="to-do.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+</head>
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="../images/dumbell2.jpg" id="barbell-icon">
+        <span class="fs-4">Elevate Fitness</span>
+    </a>
+    
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../home/test-home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../calendar/calendar.html" class="nav-link">Calendar</a></li>
+        <li class="nav-item"><a href="../to-do/to-do.html" class="nav-link active" aria-current="page">Fitness Goals</a></li>
+    </ul>
+</header>
+
+<body>
+
+    <div class="container main-title"> <h1>Fitness Goal Tracker</h1></div>
+
+    <div class="container">
+        <form id="task-form">
+            <div class="form-group">
+                <label for="task">Task:</label>
+                <input type="text" class="form-control" id="task" name="task">
+            </div>
+            <div class="form-group">
+                <label for="due">Due:</label>
+                <input type="date" class="form-control" id="due" name="due">
+            </div>
+            <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
+        </form>
+    </div>
+    <section class="container mt-3" id="tasks-bottom">
+        <h2 id="task-text">My Tasks:</h2>
+        <ul id="task-list" class="list-group">
+            <!-- Tasks will be dynamically added here -->
+        </ul>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTasks();
+        });
+
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            var taskInput = document.getElementById('task');
+            var dueInput = document.getElementById('due');
+            var taskList = document.getElementById('task-list');
+            
+            if (taskInput.value && dueInput.value) {
+                var task = { 
+                    id: Date.now(), 
+                    task: taskInput.value, 
+                    due: dueInput.value 
+                };
+                
+                addTaskToDOM(task);
+                saveTaskToLocalStorage(task);
+                
+                taskInput.value = '';
+                dueInput.value = '';
+            } else {
+                alert('Please enter both task and due date.');
+            }
+        });
+
+        document.getElementById('task-list').addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('delete-btn')) {
+                var taskId = e.target.parentElement.getAttribute('data-id');
+                removeTaskFromDOM(taskId);
+                removeTaskFromLocalStorage(taskId);
+            }
+        });
+
+        function addTaskToDOM(task) {
+            var taskList = document.getElementById('task-list');
+            var li = document.createElement('li');
+            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.setAttribute('data-id', task.id);
+            li.innerHTML = `${task.task} - Due: ${task.due} <button class="btn btn-danger btn-sm delete-btn">Delete</button>`;
+            taskList.appendChild(li);
+        }
+
+        function saveTaskToLocalStorage(task) {
+            var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function loadTasks() {
+            var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(task => addTaskToDOM(task));
+        }
+
+        function removeTaskFromDOM(taskId) {
+            var taskList = document.getElementById('task-list');
+            var taskItems = taskList.querySelectorAll('li');
+            taskItems.forEach(function(taskItem) {
+                if (taskItem.getAttribute('data-id') === taskId) {
+                    taskList.removeChild(taskItem);
+                }
+            });
+        }
+
+        function removeTaskFromLocalStorage(taskId) {
+            var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks = tasks.filter(task => task.id !== parseInt(taskId));
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="footer">
+    <p id="footer-text">© 2024 Elevate Fitness, Inc</p>
+
+
+    <ul class="footer-nav">
+        <li><a href="../home/test-home.html" class="nav-link">Home</a></li>
+        <li><a href="../calendar/calendar.html" class="nav-link">Calendar</a></li>
+        <li><a href="../to-do/to-do.html" class="nav-link">Fitness Goals</a></li>
+    </ul>
+</footer>
+
+</html>

@@ -1,0 +1,362 @@
+
+/* Header Container */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0; 
+    background-color: black;
+}
+
+/* Header Branding */
+header a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: white;
+}
+
+
+header span {
+    font-size: 1.25rem; 
+    font-weight: bold;
+    margin-right: 20rem;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-top: 1px solid #e0e0e0;
+    padding-left: 14rem;
+    padding-right: 14rem;
+}
+
+/* Footer Text */
+#footer-text {
+    margin: 0;
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin: 0 0.5rem;
+}
+
+.footer-nav .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+
+}
+
+.footer-nav .nav-link:hover {
+    background-color: rgb(26, 188, 156);
+    color: white;
+}
+
+
+/* Navigation */
+ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav li.nav-item {
+    margin: 0 0.5rem;
+}
+
+ul.nav a.nav-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1rem; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul.nav a.nav-link.active,
+ul.nav a.nav-link:hover {
+    color: #fff; 
+    background-color: rgb(26, 188, 156);
+}
+
+#barbell-icon{
+    height: 3rem;
+    margin-right: 1rem; 
+}
+
+.main-title{
+    margin-bottom: 1%;
+}
+
+.main-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent; 
+    border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none;
+}
+
+/* Optional: Adjust icon color */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d3c9c9;
+}
+
+/* Highlight the "current" day */
+.current-day {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important;
+}
+
+/*tasks*/
+.task-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+
+}
+
+.tasks{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.flexIsDumb{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.badge-custom{
+    background-color: white;
+    border: 2px solid black;
+    color: white;
+    font-size: 1rem !important;
+}
+
+/* input */
+.inputContainer{
+    display:flex;
+    border: 4px solid #ddd;
+}
+
+.userInfo h3{
+    display: flex;
+    justify-content: center;
+}
+
+#plan-text{
+    font-size:1.2rem;
+    overflow:visible;
+}
+
+#carousel-inner{
+    text-align: center;
+}
+
+/* Month content and carousel controls */
+.month-content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+ul.weekdays{
+    display: flex;
+    justify-content: center;
+}
+
+.month-year-container {
+    background-color: #1abc9c;
+    color: white; 
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.month-year-container h1{
+    margin: 0.5rem 0;
+    font-family: Verdana, sans-serif;
+    font-size: 1.8rem;
+}
+
+.month-year-container h2{
+    margin: 0.5rem 0;
+    font-family: Verdana, sans-serif;
+    font-size: 1.3rem;
+}
+
+/* Basic button styles */
+.slide {
+    position: relative;
+    overflow: hidden;
+    color: #4e4e4e;
+    border: 1px solid #d3c9c9;
+    transition: color 0.1s, border-color 0.1s;
+}
+
+/* Pseudo-element for animation */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 188, 156);
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+/* On hover or focus */
+.slide:hover::before,
+.slide:focus::before {
+    transform: scaleX(1); 
+}
+
+/* Additional button styles */
+.slide:hover,
+.slide:focus {
+    color: #fff;
+}
+
+.slide h3{
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo{
+    z-index: 4;
+}
+
+.main-title h1{
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.task-title h2{
+    font-weight: bold;
+}
+  
+  
+
+
+

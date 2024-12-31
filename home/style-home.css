@@ -1,0 +1,293 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Grid Layout */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, sans-serif;
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* Header Container */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0; 
+    background-color: black; 
+}
+
+/* Header Branding */
+header a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: white;
+}
+
+
+header span {
+    font-size: 1.25rem;
+    font-weight: bold; 
+    margin-right: 20rem; 
+}
+
+#barbell-icon{
+    height: 3rem;
+    margin-right: 1rem; 
+}
+
+/* Navigation */
+ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav li.nav-item {
+    margin: 0 0.5rem; 
+}
+
+ul.nav a.nav-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.25rem; 
+    font-size: 1rem; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+ul.nav a.nav-link.active, 
+ul.nav a.nav-link:hover { /* Hover state */
+    color: #fff; 
+    background-color: rgb(26, 188, 156);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    color: #343a40;
+}
+
+.hero p {
+    margin-bottom: 1em;
+    color: #6c757d;
+}
+
+.cta-button {
+    padding: 0.5em 1em;
+    background: rgb(26, 188, 156);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about h2 {
+    margin-bottom: 0.5em;
+    color: #343a40;
+}
+
+/* Services Section */
+.services {
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    border: 2px solid #ddd;
+    margin-bottom: 3rem;
+
+}
+
+.services .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+}
+
+.service {
+    width: 85%;
+    padding: 5%;
+    border-radius: 20px;
+    margin-bottom: 3%;
+    background-color: rgb(26, 188, 156);
+    color: white;
+}
+
+.service h3 {
+    margin-bottom: 0.5em;
+    color: white;
+    font-weight: bold;
+}
+.services h2 {
+    margin-bottom: 1em; 
+
+  }
+
+/* Contact Section */
+.contact {
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    border: 2px solid #ddd;
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 0.5em 1em;
+    background: rgb(26, 188, 156);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-top: 1px solid #e0e0e0;
+    padding-left: 14rem;
+    padding-right: 14rem;
+}
+
+/* Footer Text */
+#footer-text {
+    margin: 0;
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin: 0 0.5rem; 
+}
+
+.footer-nav .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.footer-nav .nav-link:hover {
+    background-color: rgb(26, 188, 156);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services .container {
+        grid-template-columns: 1fr;
+    }
+}
+#home{
+    border: 2px solid #ddd;
+}
+
+#home h2{
+    font-weight: bold;
+}
+
+#about{
+    border: 2px solid #ddd;
+}
+
+#about h2{
+    font-weight: bold;
+}
+
+#services h2{
+    font-weight: bold;
+    
+}
+
+#contact h2{
+    font-weight: bold;
+}
+
+
